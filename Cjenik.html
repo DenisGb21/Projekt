@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="C:\Users\denis\Documents\Web_Aplikacije_Vjezbe\favicon_01.ico">
+    <title>Autolakirnica Grbac - Cjenik</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background-image: url(Pictures/Slika.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+
+        nav {
+            background-color: white;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            width: 100%;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        nav li {
+            height: 50px;
+        }
+
+        nav a {
+            height: 100%;
+            padding: 0 30px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color: black;
+        }
+
+        nav a:hover {
+            background-color: #f0f0f0;
+        }
+
+        nav li:first-child{
+            margin-right: auto;
+        }
+
+        .sstrane {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 250px;
+            z-index: 999;
+            background-color: rgb(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .sstrane li {
+            width: 100%;
+            
+        }
+
+        .sstrane a {
+            width: 100%;
+        }
+
+        .menuButton {
+            display: none;
+        }
+
+        @media(max-width: 650px) {
+            .hideOnMobile {
+            display: none;
+            }
+
+            .menuButton {
+            display: block;
+            }
+
+        }
+
+        @media(max-width: 400px){
+            .sstrane {
+                width: 100%;
+            }
+        }
+
+        section {
+            padding: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        table th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #f2f2f2;
+        }
+
+        footer{
+            text-align: center;
+            background-color: #5d5e63;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="sstrane">
+            <li onclick="closeSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="C:\Users\Mario\Desktop\Cjenik.html">Cjenik</a></li>
+            <li><a href="C:\Users\Mario\Desktop\Kontakt.html">Kontakt</a></li>
+            <li><a href="C:\Users\Mario\Desktop\O_nama.html">O nama</a></li>
+        </ul>
+        <ul>
+            <li><a href="C:\Users\Mario\Desktop\Naslovnica.html">Autolakirnica Grbač</a></li>
+            <li class="hideOnMobile"><a href="C:\Users\Mario\Desktop\Cjenik.html">Cjenik</a></li>
+            <li class="hideOnMobile"><a href="C:\Users\Mario\Desktop\Kontakt.html">Kontakt</a></li>
+            <li class="hideOnMobile"><a href="C:\Users\Mario\Desktop\O_nama.html">O nama</a></li>
+            <li class="menuButton" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h1>Cjenik usluga</h1>
+        <table>
+            <tr>
+                <th>Usluga</th>
+                <th>Cijena</th>
+            </tr>
+            <tr>
+                <td>Lakiranje vozila</td>
+                <td>80 - 120 &euro;</td>
+            </tr>
+            <tr>
+                <td>Poliranje</td>
+                <td>100 - 200 &euro;</td>
+            </tr>
+            <tr>
+                <td>Poliranje fara</td>
+                <td>20 &euro;</td>
+            </tr>
+            <tr>
+                <td>Poliranje farova</td>
+                <td>30 &euro;</td>
+            </tr>
+            <tr>
+                <td>Ušpricavanje</td>
+                <td>20 - 30 &euro;</td>
+            </tr>
+            <tr>
+                <td>Flek</td>
+                <td>20 - 30 &euro;</td>
+            </tr>
+            <tr>
+                <td>Lakiranje praga</td>
+                <td>50 - 80 &euro;</td>
+            </tr>
+            <tr>
+                <td>Lakiranje retrovizora</td>
+                <td>20 - 30 &euro;</td>
+            </tr>
+            <tr>
+                <td>Lakiranje felge</td>
+                <td>50 &euro;</td>
+            </tr>
+            <tr>
+                <td>Lakiranje felgi</td>
+                <td>200 &euro;</td>
+            </tr>
+            <tr>
+                <td>Lakiranje spojlera</td>
+                <td>50 &euro;</td>
+            </tr>
+            <tr>
+                <td>Demontaža/montaža</td>
+                <td>10 - 100 &euro;</td>
+            </tr>
+            <!-- Dodajte više usluga prema potrebi -->
+        </table>
+    </section>
+
+    <footer>CopyRight &copy; Autolakirnica Grbač</footer>
+
+    <script>
+        function showSidebar(){
+            const sstrane = document.querySelector('.sstrane')
+            sstrane.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sstrane = document.querySelector('.sstrane')
+            sstrane.style.display = 'none'
+        }
+
+    </script>
+</body>
+
+</html>
